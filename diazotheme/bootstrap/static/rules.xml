@@ -41,6 +41,7 @@
    
    
     <prepend theme="/html/head" content="/html/head/base"/>
+	
 
     <replace theme="//*[@id='logo']/h1" content="//*[@id='content']/h1"/>
 

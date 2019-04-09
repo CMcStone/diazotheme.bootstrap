@@ -26,12 +26,19 @@
       <!-- CSS concatenated and minified via ant build script-->
       <link rel="stylesheet" href="css/public.css"/>
       <link rel="stylesheet" href="css/reset.css"/>
-      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
-      <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" media="screen"/>
+	  <!-- Latest compiled and minified CSS -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	  <!-- Optional theme -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	  <!-- Latest compiled and minified JavaScript -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
       <link rel="stylesheet" href="openid-selector/css/openid.css"/>
       <link rel="stylesheet" href="css/theme.css"/>
       <link rel="stylesheet" href="jqueryui/css/eggplant/jquery-ui-1.8.5.custom.css"/>
+	  <link rel="stylesheet" href="css/overrides.css"/>
       <!-- end CSS-->
 
       <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -39,26 +46,30 @@
          <!-- All JavaScript at the bottom, except for Modernizr / Respond.
          Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
          For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-         <script src="js/libs/modernizr-2.0.6.min.js"></script>
+         <!--script src="js/libs/modernizr-2.0.6.min.js"></script-->
+	
+	
 
       </head>
 
       <body>
 
-         <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
+         <nav class="navbar navbar-default">
+            <!--div class="navbar-inner"-->
                <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse"
-                   data-target="#topnav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </a>
-               <a class="brand" href="/dashboard"><img src="img/home.png"/></a>
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				              <span class="sr-only">Toggle navigation</span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+				            </button>
+				
+               <a class="navbar-brand" href="#"><img src="img/home.png"/></a>
+             </div>
 
-
-               <div class="nav-collapse" id="topnav-collapse">
-                  <ul id="nav" class="nav">
+               <div class="collapse navbar-collapse" id="navbar">
+                  <ul id="nav" class="nav navbar-nav">
                      <li><a href="#about">About</a></li>
                      <li class="dropdown" data-dropdown='dropdown'>
                      <a href="#" class="dropdown-toggle">Services</a>
@@ -84,9 +95,9 @@
                   </form>
                </div>
                </div>
-            </div>
+            <!--/div-->
 
-         </div>
+         </nav>
 
          <div id="container" class="container">
             <div id="header">
@@ -306,17 +317,12 @@
 
 
             <!-- scripts concatenated and minified via ant build script-->
+            
+            <!--script src="bootstrap/js/bootstrap.js"></script-->
             <script>
-               var jQuery14 = jQuery;
-            </script>
-            <script src="jquery-1.7.1.min.js"></script>
-            <script src="bootstrap/js/bootstrap.js"></script>
-            <script>
-               var jQuery17 = jQuery;
-               $ = jQuery14;
-               jQuery = jQuery14;
-               jQuery17(document).ready(function () {
-                  jQuery17('.dropdown-toggle').dropdown();
+               
+               jQuery(document).ready(function () {
+                  jQuery('.dropdown-toggle').dropdown();
                });
             </script>
             <script defer src="js/plugins.js"></script>
@@ -324,6 +330,7 @@
             <script defer src="js/openid-providers.js"></script>
             <script defer src="js/openid-wrapper.js"></script>
             <script defer src="js/script.js"></script>
+			
             <div id="site-scripts"></div>
 
             <!-- end scripts-->
