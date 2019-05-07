@@ -73,20 +73,19 @@
     </prepend>
 
 
-
+   
 
     <copy css:theme="#topsearchbox" css:content="#portal-searchbox form" attributes="action"/>
     <replace css:theme="#center-column">
         <div id="center-column"><xsl:attribute name="class">
                 <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-3:4")'>
-                    twocolumns span9
+                    col-md-9
                 </xsl:if>
                 <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-1:2")'>
-                    threecolumns span6
+                    col-md-6
                 </xsl:if>
                 <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-full")'>
-                    nocolumns span12
-                </xsl:if>
+					col-md-12 </xsl:if>
             </xsl:attribute>
             <xsl:if css:test=".AbovePortletManager3">
                 <div id="portletAboveContent">
