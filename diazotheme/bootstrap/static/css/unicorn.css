@@ -1,0 +1,15 @@
+/*hero banners */
+.carousel-banners.hero-banner-responsive, .carousel-banner.hero-responsive {
+	width:100% !important;
+}
+
+.hero-responsive img {
+	width:100%;
+}
+
+@media screen and (min-width: 768px){
+.jumbotron {
+    padding-top: 0px;
+	    padding-bottom: 48px;
+}
+}

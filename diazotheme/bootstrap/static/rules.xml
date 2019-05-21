@@ -213,7 +213,7 @@
 	<rules css:if-content=".portaltype-subsite">
 			<drop css-content="div.carousel"/>
 		
-		<replace css:theme=".target" css:content="div.carousel" method="raw"/>
+		<copy css:content="div.carousel" css:theme=".wall.wallpaper" method="raw"/>
 	</rules>
 	
     <append css:theme="#right-column-content"

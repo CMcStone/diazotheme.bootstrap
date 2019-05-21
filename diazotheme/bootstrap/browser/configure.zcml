@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+	xmlns:carousel="http://namespaces.plone.org/carousel"
+    i18n_domain="diazotheme.bootstrap">
+	
+	<include package="Products.Carousel" />
+
+	<carousel:banner
+	  name="hero-banner"
+	  template="banner/hero-banner.pt"
+	  title="HeroBanner"
+	  />
+	  
+	  <browser:page
+	      for="Products.Carousel.interfaces.ICarousel"
+	      name="resp-banner-base"
+	      template="banner/respBanner-base.pt"
+	      permission="zope.Public"
+	      />
+	  
+
+</configure>
