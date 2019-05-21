@@ -3,3 +3,11 @@
 background-color: #563d7c;
 
 }
+/* form stuff */
+input[type=checkbox] {
+	vertical-align: unset;
+}
+.option label span.label {
+	color:initial;
+	font-size:100%;
+}

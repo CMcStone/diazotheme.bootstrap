@@ -39,6 +39,10 @@
       <link rel="stylesheet" href="css/theme.css"/>
       <link rel="stylesheet" href="jqueryui/css/eggplant/jquery-ui-1.8.5.custom.css"/>
 	  <link rel="stylesheet" href="css/overrides.css"/>
+	  <!--link rel="stylesheet" href="css/background.css"/-->
+	  
+	  
+	  
       <!-- end CSS-->
 
       <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -53,15 +57,19 @@
       </head>
 
       <body>
-  		<div id="skip-link"><a href="#content" class="sr-only sr-only-focusable">Skip to main content</a></div>
-		<div class="jumbotron">
+		  
+		<div id="skip-link"><a href="#content" class="sr-only sr-only-focusable">Skip to main content</a></div>
+		
+		<div class="row jumbotron">
 		  <div class="container">
-		    Jumbotron Here
+		    <div class="target"></div>
+			
 		  </div>
 		</div>
-		  
+		<div class="container" id="main">
+
          <nav class="navbar navbar-default">
-            <!--div class="navbar-inner"-->
+            <!--div class="navbar-inner"-->   
                <div class="container">
 				<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -269,11 +277,14 @@
                </div>
                <div class="row">
                   <div id="portletBelowContentD" class="offset1 span10">
-                  </div>
-               </div>
+				                 </div>
             <div style="clear:both">&nbsp;</div>
+		
 
-            </div>
+             </div>
+		     </div>
+		     </div>
+		 </div> <!--end container main-->
 
             <div style="clear:both">&nbsp;</div>
             <div class="footer container">
@@ -325,17 +336,23 @@
             <!-- scripts concatenated and minified via ant build script-->
             
             <!--script src="bootstrap/js/bootstrap.js"></script-->
+			
+				
             <script>
                
                jQuery(document).ready(function () {
                   jQuery('.dropdown-toggle').dropdown();
+				  
+				  
                });
             </script>
+			<script src="js/plugins/background.js"></script>
             <script defer src="js/plugins.js"></script>
             <script defer src="openid-selector/js/openid-jquery.js"></script>
             <script defer src="js/openid-providers.js"></script>
             <script defer src="js/openid-wrapper.js"></script>
             <script defer src="js/script.js"></script>
+			
 			
             <div id="site-scripts"></div>
 

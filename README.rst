@@ -23,7 +23,7 @@ Features
   carousel
 * ``Products.ContentWellPortlets`` is supported, however with some modifications. 
 
-  * PortletAboveContentA will appear full width right below logo
+  * PortletAboveConte. ntA will appear full width right below logo
   * PortletAboveContentB will appear full width right below breadcrumbs
   * PortletAboveContentC will appear fluid width right above content center 
     column

@@ -1,5 +1,5 @@
-<tal:block define="portletId view/randId">
-<div tal:attributes="id portletId" class="carousel slide">
+<tal:block define="bannerId view/randId">
+<div tal:attributes="id bannerId" class="carousel slide">
    <!-- Carousel items -->
    <div class="carousel-inner" tal:define="global itemClass string:item active">
       <tal:block tal:repeat="image view/images">
@@ -22,7 +22,7 @@
       </tal:block>
    </div>
    <!-- Carousel nav -->
-   <a class="carousel-control left" tal:attributes="href string:#${portletId}" data-slide="prev">&lsaquo;</a>
-   <a class="carousel-control right" tal:attributes="href string:#${portletId}" data-slide="next">&rsaquo;</a>
+   <a class="carousel-control left" tal:attributes="href string:#${bannerId}" data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" tal:attributes="href string:#${bannerId}" data-slide="next">&rsaquo;</a>
 </div>
 </tal:block>

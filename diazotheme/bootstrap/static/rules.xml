@@ -6,18 +6,19 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     >
     <replace theme="/html/head/title" content="/html/head/title" />
+	
 
-    <theme href="base.html" css:if-content="#visual-portal-wrapper"/>
-    <theme href="dialog.html" css:if-content="#content.dialog-wrapper"/>
-    <drop css:content="meta[http-equiv='X-UA-Compatible']"/>
-    <rules css:if-content="#content.dialog-wrapper">
+    <theme href="unicorn.html" css:if-content="#visual-portal-wrapper"/>
+    <!--theme href="dialog.html" css:if-content="#content.dialog-wrapper"/-->
+    <!--drop css:content="meta[http-equiv='X-UA-Compatible']"/-->
+    <!--rules css:if-content="#content.dialog-wrapper">
         <prepend theme="/html/head" content="/html/head/base"/>
         <after css:theme="meta[http-equiv='X-UA-Compatible']" 
             content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
         <replace theme="/html/body"
             content="/html/body"/>
 		
-    </rules>
+    </rules-->
     <theme href="html5slides/template/index.html" css:if-content=".presentation"/>
     <rules css:if-content=".presentation">
          <replace css:theme-children="section">
@@ -32,13 +33,14 @@
             </xsl:for-each>
          </replace>
     </rules>
-
+ 
     <!--    
     <notheme if-content="html/head/link[@href='/manage_page_style.css']"/>
     <notheme css:if-content="#content.dialog-wrapper"/>
     <notheme css:if-content="body.popup"/>
     -->
     <rules css:if-content="#visual-portal-wrapper">
+   
    
    
     <prepend theme="/html/head" content="/html/head/base"/>
@@ -100,14 +102,15 @@
             <div id="#viewlet-above-content">
                 <xsl:for-each css:select="#viewlet-above-content > *">
                     <xsl:if test="@id">
-                    <xsl:if test="@id!='portlets-above' and
-                                  @id!='portal-breadcrumbs'">
+		                    <xsl:if test="@id!='portlets-above' and
+                                  @id!='portal-breadcrumbs' and @class!='carousel'">
                         <xsl:copy-of select="current()"/>
                     </xsl:if>
                     </xsl:if>
                     <xsl:if test="not(@id)">
                         <xsl:copy-of select="current()"/>
                     </xsl:if>
+					
                 </xsl:for-each>
             </div>
             <article>
@@ -204,7 +207,15 @@
             <xsl:copy-of css:select="#portal-column-one .managePortletsLink"/>
         </div>
     </replace>
-
+	
+	<!-- front page banner -->
+	
+	<rules css:if-content=".portaltype-subsite">
+			<drop css-content="div.carousel"/>
+		
+		<replace css:theme=".target" css:content="div.carousel" method="raw"/>
+	</rules>
+	
     <append css:theme="#right-column-content"
         css:content="#portletmanager-plone-rightcolumn"/>
     <replace css:theme-children="#right-column-content">
