@@ -26,6 +26,7 @@
       <!-- CSS concatenated and minified via ant build script-->
       <link rel="stylesheet" href="css/public.css"/>
       <link rel="stylesheet" href="css/reset.css"/>
+	  
 	  <!-- Latest compiled and minified CSS -->
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -34,12 +35,30 @@
 
 	  <!-- Latest compiled and minified JavaScript -->
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	  
+	 
+	  <!-- SmartMenus jQuery plugin -->
+	  <script type="text/javascript" src="smartmenus/src/jquery.smartmenus.js"></script>
+
+	  <!-- SmartMenus jQuery init -->
+	  <script type="text/javascript">
+	  	$(function() {
+	  		$('#main-menu').smartmenus({
+	  			subMenusSubOffsetX: 1,
+	  			subMenusSubOffsetY: -8
+	  		});
+	  	});
+	  </script>
+	
+	  
 
       <link rel="stylesheet" href="openid-selector/css/openid.css"/>
       <link rel="stylesheet" href="css/theme.css"/>
       <link rel="stylesheet" href="jqueryui/css/eggplant/jquery-ui-1.8.5.custom.css"/>
 	  <link rel="stylesheet" href="css/overrides.css"/>
 	  <link rel="stylesheet" href="css/unicorn.css"/>
+	  <link rel="stylesheet" href="smartmenus/src/css/sm-core-css.css"/>
+	  <link rel="stylesheet" href="smartmenus/src/css/sm-blue/sm-blue.css"/>
 	  <!--link rel="stylesheet" href="css/background.css"/-->
 	  
 	  
@@ -68,50 +87,80 @@
 		  </div>
 		</div>
 		<div class="container" id="main ">
-         <nav class="navbar navbar-default">
-            <!--div class="navbar-inner"-->   
-               <div class="container">
-				<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				              <span class="sr-only">Toggle navigation</span>
-				              <span class="icon-bar"></span>
-				              <span class="icon-bar"></span>
-				              <span class="icon-bar"></span>
-				            </button>
-				
-               <a class="navbar-brand" href="#"><img src="img/home.png"/></a>
-             </div>
-
-               <div class="collapse navbar-collapse" id="navbar">
-                  <ul id="nav" class="nav navbar-nav">
-                     <li><a href="#about">About</a></li>
-                     <li class="dropdown" data-dropdown='dropdown'>
-                     <a href="#" class="dropdown-toggle">Services</a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#item1">Plone Development</a></li>
-                     </ul>
-                     </li>
-                     <li><a href="#contact">Contact</a></li>
-                  </ul>
-                  <ul id="secondary-nav" class="nav pull-right">
-                     <li class="dropdown" data-dropdown="dropdown">
-                     <a class="dropdown-toggle" href="#">
-                        <span id="personaltool-menuheader">User</span>
-                        <b class="caret"></b></a>
-                     <ul class="dropdown-menu" id="personaltool-menu">
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Logout</a></li>
-                     </ul>
-                     </li>
-                  </ul>
-                  <form id="topsearchbox" class="navbar-search pull-right">
-                     <input class="search-query" name="SearchableText" placeholder="Search"/>
-                  </form>
-               </div>
-               </div>
-            <!--/div-->
-
-         </nav>
+	    <div id="util-bar-wrap" class="row">
+	      <nav class="util-bar">
+	        <ul>
+       	          <li class="hidden-xs" id="uti-home">
+                  <a href="#">
+                    <img src="images/icons/home.png" alt="Home" />
+                  </a>
+       	          </li>
+    	          <li class="hidden-xs" id="uti-contact">
+    	            <a href="contact">Contact</a>
+    	          </li>
+	          <li class="hidden-xs" id="uti-news">
+	            <a href="news">Latest News</a>
+	          </li>
+	          <li class="hidden-xs" id="uti-events">
+	            <a href="events">Events</a>
+	          </li>
+	          <li class="hidden-xs" id="uti-give">
+	            <a href="give">Give</a>
+	          </li>
+	          <li class="hidden-xs" id="uti-search">
+	            <form id="livesearch0" action=".">
+								<label for="searchi" class="sr-only">Search</label>
+	              <input type="search" name="searchi" id="searchi" placeholder="Search" />
+								<input type="submit" name="submit" value="GO" />
+								<div id="LSResult" class="LSResult">
+									<div id="LSShadow" class="LSShadow">
+										<fieldset class="livesearchContainer">
+											<legend id="livesearchLegend">LiveSearch Suggested Pages</legend>
+											<div class="LSIEFix">
+												<ul class="LSTable">
+													<li class="LSRow">
+														<a class="contenttype-news-item" title="CMB research leads to new FDA-approved treatment for severe depression" href="http://mindbrain.ucdavis.edu/people/sjluck/cmb-news-and-information/cmb-research-leads-to-new-fda-approved-treatment-for-severe-depression?searchterm=brain">CMB research leads to new FDA-approved treatment f...</a>
+														<div class="LSDescr"></div>
+													</li>
+													<li class="LSRow">
+														<a class="contenttype-link" title="BrainsRule" href="http://mindbrain.ucdavis.edu/about/neuroscience-for-kids/brainsrule?searchterm=brain">BrainsRule</a>
+														<div class="LSDescr">
+															A site featuring interactive content to teach kids about the brain
+														</div>
+													</li>
+													<li class="LSRow">
+														<img width="16" height="16" alt="File" src="http://mindbrain.ucdavis.edu/pdf.png"> <a class="contenttype-file" title="NPB 165 Course Topics" href="http://mindbrain.ucdavis.edu/people/kcbacker/npb165topics.pdf/view?searchterm=brain">NPB 165 Course Topics</a>
+														<div class="LSDescr"></div>
+													</li>
+													<li class="LSRow">
+														<a class="showalllink" href="@@search?SearchableText=brain%2A&amp;path=/mindbrain">Show all items</a>
+													</li>
+												</ul>
+											</div>
+										</fieldset>
+									</div><!-- /#LSShadow -->
+								</div><!-- /#LSResult -->
+	            </form>
+	          </li>
+	          <li class="hidden-xs" id="uti-share">
+	            <a href="#"></a>
+	          </li>
+	          <li id="uti-logo">
+	            <a href="http://www.ucdavis.edu">
+	              <img src="images/logos/nav-logo.png" />
+	            </a>
+	          </li>
+	        </ul>
+	      </nav>
+	    </div>
+		<nav id="main-nav">
+			<ul id="main-menu" class="sm sm-blue">
+				<li> menu items here</li>
+			</ul>
+			
+		</nav>
+		
+        
  		<div class="container">
 		 
 
@@ -349,7 +398,7 @@
 				  
                });
             </script>
-			<script src="js/plugins/background.js"></script>
+			
             <script defer src="js/plugins.js"></script>
             <script defer src="openid-selector/js/openid-jquery.js"></script>
             <script defer src="js/openid-providers.js"></script>

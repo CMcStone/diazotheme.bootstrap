@@ -170,12 +170,13 @@
 
 
     <replace css:theme="#logo" css:content="#portal-logo"/>
+	<replace css:theme-children="#main-menu" css:content-children="#portal-globalnav" />
 
-    <replace css:theme-children="#nav">
+    <!--replace css:theme-children="#nav">
         <xsl:for-each css:select="#portal-globalnav > li">
             <xi:include href="navigation-rules.xml"/>
         </xsl:for-each>
-    </replace>
+    </replace-->
     <replace css:theme-children="#personaltool-menu" 
         css:content-children="#portal-personaltools ul"/>
     <replace css:theme-children="#personaltool-menuheader" 
