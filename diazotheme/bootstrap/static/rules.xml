@@ -168,8 +168,9 @@
     <drop css:theme="#left-column" css:if-not-content="#portal-column-one"/>
     <drop css:theme="#right-column" css:if-not-content="#portal-column-two"/>
 
-
-    <replace css:theme="#logo" css:content="#portal-logo"/>
+    <replace css:theme-children=".nav-brand" css:content="#portal-logo" />
+	
+	<!--replace css:theme="#logo" css:content="#portal-logo"/-->
 	<replace css:theme-children="#main-menu" css:content-children="#portal-globalnav" />
 
     <!--replace css:theme-children="#nav">
@@ -185,7 +186,7 @@
         <li><xsl:copy-of css:select="#personaltools-login"/></li>
     </replace>
 
-    <copy css:theme=".navbar-fixed-top .brand" css:content="#portal-logo" attributes="href"/>
+    <!--copy css:theme=".navbar-fixed-top .brand" css:content="#portal-logo" attributes="href"/-->
     <replace css:theme-children=".breadcrumb">
         <xsl:for-each css:select="#portal-breadcrumbs > span">
             <li>

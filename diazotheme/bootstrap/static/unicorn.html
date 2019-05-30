@@ -27,6 +27,7 @@
       <link rel="stylesheet" href="css/public.css"/>
       <link rel="stylesheet" href="css/reset.css"/>
 	  
+	  
 	  <!-- Latest compiled and minified CSS -->
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -59,6 +60,7 @@
 	  <link rel="stylesheet" href="css/unicorn.css"/>
 	  <link rel="stylesheet" href="smartmenus/src/css/sm-core-css.css"/>
 	  <link rel="stylesheet" href="smartmenus/src/css/sm-blue/sm-blue.css"/>
+	  <link rel="stylesheet" href="css/topbar.css"/>
 	  <!--link rel="stylesheet" href="css/background.css"/-->
 	  
 	  
@@ -114,30 +116,7 @@
 								<input type="submit" name="submit" value="GO" />
 								<div id="LSResult" class="LSResult">
 									<div id="LSShadow" class="LSShadow">
-										<fieldset class="livesearchContainer">
-											<legend id="livesearchLegend">LiveSearch Suggested Pages</legend>
-											<div class="LSIEFix">
-												<ul class="LSTable">
-													<li class="LSRow">
-														<a class="contenttype-news-item" title="CMB research leads to new FDA-approved treatment for severe depression" href="http://mindbrain.ucdavis.edu/people/sjluck/cmb-news-and-information/cmb-research-leads-to-new-fda-approved-treatment-for-severe-depression?searchterm=brain">CMB research leads to new FDA-approved treatment f...</a>
-														<div class="LSDescr"></div>
-													</li>
-													<li class="LSRow">
-														<a class="contenttype-link" title="BrainsRule" href="http://mindbrain.ucdavis.edu/about/neuroscience-for-kids/brainsrule?searchterm=brain">BrainsRule</a>
-														<div class="LSDescr">
-															A site featuring interactive content to teach kids about the brain
-														</div>
-													</li>
-													<li class="LSRow">
-														<img width="16" height="16" alt="File" src="http://mindbrain.ucdavis.edu/pdf.png"> <a class="contenttype-file" title="NPB 165 Course Topics" href="http://mindbrain.ucdavis.edu/people/kcbacker/npb165topics.pdf/view?searchterm=brain">NPB 165 Course Topics</a>
-														<div class="LSDescr"></div>
-													</li>
-													<li class="LSRow">
-														<a class="showalllink" href="@@search?SearchableText=brain%2A&amp;path=/mindbrain">Show all items</a>
-													</li>
-												</ul>
-											</div>
-										</fieldset>
+										
 									</div><!-- /#LSShadow -->
 								</div><!-- /#LSResult -->
 	            </form>
@@ -153,14 +132,15 @@
 	        </ul>
 	      </nav>
 	    </div>
-		<nav id="main-nav" role="navigation">
+		<nav class="main-nav row" role="navigation">
 		    <!-- Mobile menu toggle button (hamburger/x icon) -->
 		    <input id="main-menu-state" type="checkbox" />
 		    <label class="main-menu-btn" for="main-menu-state">
 		      <span class="main-menu-btn-icon"></span> Toggle main menu visibility
 		    </label>
 
-		    <h2 class="nav-brand"><a href="#">Brand</a></h2>
+		    <h2 class="nav-brand">
+				<a href="#">Brand</a></h2>
 			<ul id="main-menu" class="sm sm-blue">
 				<li> menu items here</li>
 			</ul>
@@ -169,12 +149,7 @@
 		
         
  		<div class="container">
-		 
-
-         
-            <div id="header">
-               <img id="logo" src="img/logo.png"/>
-            </div>
+		
 
             <div id="main" role="main" class="icons-on">
                <div>
