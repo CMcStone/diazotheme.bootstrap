@@ -1,25 +1,21 @@
 /*hero banners */
 .carousel-banners.hero-banner-responsive, .carousel-banner.hero-responsive {
-	width:100% !important;
-}
+  width: 100% !important; }
 
 .hero-responsive img {
-	width:100%;
-}
-@media screen and (min-width: 991px) {
-.carousel-banners.hero-banner-responsive, .carousel-banner.hero-responsive  {
-    height: 540px !important;
-}
+  width: 100%; }
 
-@media screen and (min-width: 768px){
-.row.jumbotron {
-	padding: 0 !important;
-	    margin: 0 !important;
-	    text-align: center;
-	    margin-top: 20px;
-	    background-color: transparent;
-	    position: absolute;
-	    z-index: -100;
-	    width: 100%;
-}
-}
+@media screen and (min-width: 991px) {
+  .carousel-banners.hero-banner-responsive, .carousel-banner.hero-responsive {
+    height: 540px !important; } }
+
+@media screen and (min-width: 768px) {
+  .row.jumbotron {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    margin-top: 20px;
+    background-color: transparent;
+    position: absolute;
+    z-index: -100;
+    width: 100%; } }

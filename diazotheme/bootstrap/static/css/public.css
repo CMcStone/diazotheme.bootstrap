@@ -10,10 +10,10 @@
     z-index: 2;
 }
 
-#portal-logo {
+/*#portal-logo {
     display: inline-block;
     margin: 1.375em 0;
-}
+} */
 /* removes extra space above logo in IE6 and IE7 */
 /* .ie6 and .ie7 is set on <html> by Modernizr library */
 .ie6 #portal-logo,

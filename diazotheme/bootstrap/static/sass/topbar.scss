@@ -1,4 +1,5 @@
 /*utility menu */
+@import "ucdvariables";
 
 @media screen and (max-width: 1309px) {
 #util-bar-wrap {
@@ -21,26 +22,37 @@
 }
 .util-bar ul li {
     float: left;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 1em;
+    padding-right: 1em;
     height: 100%;
     text-align: center;
     border-right: 1px solid #fff;
 }
+.util-bar ul li a {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+    font-weight: normal;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.050em;
+    text-align: center;
+}
+
+.util-bar #uti-logo {
+    border-right-width: 0;
+    position: relative;
+    overflow: hidden;
+    width: 18%;
+}
 /* main nav */
 
 .main-nav {
-  background: #3092c0;
-  background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, #3298c8), color-stop(100%, #2e8cb8));
-  background-image: -webkit-linear-gradient(to bottom, #3298c8, #2e8cb8);
-  background-image: -moz-linear-gradient(to bottom, #3298c8, #2e8cb8);
-  background-image: -o-linear-gradient(to bottom, #3298c8, #2e8cb8);
-  background-image: linear-gradient(to bottom, #3298c8, #2e8cb8);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
+  background: $ucd_blue_100;
+  
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -62,7 +74,7 @@
 
 .nav-brand a {
   display: block;
-  padding: 10px 10px 10px 20px;
+  /*padding: 10px 10px 10px 20px; */
   color: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 22px;
