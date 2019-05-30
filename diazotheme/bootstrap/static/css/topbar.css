@@ -13,6 +13,17 @@
   margin-top: 56px;
   margin-left: auto; }
 
+.util-bar ul {
+  height: 100%; }
+
+.util-bar ul li {
+  float: left;
+  padding-left: 3px;
+  padding-right: 3px;
+  height: 100%;
+  text-align: center;
+  border-right: 1px solid #fff; }
+
 /* main nav */
 .main-nav {
   background: #3092c0;
